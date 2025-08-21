@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="te">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>వినాయక చవితి ఆహ్వాన పత్రిక</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Baloo+Tammudu+2:wght@400;700&family=Noto+Sans+Telugu:wght@400;700&display=swap');
+
+    body {
+      font-family: 'Noto Sans Telugu', sans-serif;
+      background-color: #F8F4E1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+      padding: 20px;
+    }
+
+    .poster-container {
+      position: relative;
+      width: 100%;
+      max-width: 600px;
+      padding: 2.5rem 1.5rem;
+      background-color: #FFF;
+      border: 4px solid #FFC300;
+      border-radius: 1.5rem;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      overflow: hidden;
+    }
+
+    /* Decorative side borders */
+    .poster-container::before, .poster-container::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 25px;
+      background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M50 0 A50 50 0 0 1 50 100 A50 50 0 0 1 50 0 Z" fill="%23FFC300"/><circle cx="50" cy="50" r="40" fill="%23FFA500"/></svg>');
+      background-size: contain;
+      background-repeat: repeat-y;
+      opacity: 0.6;
+    }
+    .poster-container::before { left: 0; }
+    .poster-container::after { right: 0; transform: scaleX(-1); }
+
+    /* Garlands */
+    .garlands {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100%;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      z-index: 10;
+    }
+    .garland-image {
+      width: 45%;
+      max-height: 90px;
+      object-fit: contain;
+    }
+
+    /* Ganesh Image */
+    .ganesha-placeholder {
+      width: 180px;
+      height: 180px;
+      background-image: url('img_1.png'); /* ✅ ఇక్కడ మీ గణేశుడు photo */
+      background-size: cover;
+      background-position: center;
+      border-radius: 50%;
+      margin: 40px auto 20px auto;
+      border: 3px solid #FFD700;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Text Styles */
+    .om-ganesh {
+      font-family: 'Baloo Tammudu 2', sans-serif;
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: #FF6600;
+      margin-bottom: 0.5rem;
+    }
+    .organizer {
+      font-family: 'Baloo Tammudu 2', sans-serif;
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: #CC7722;
+      margin-bottom: 1rem;
+      border-bottom: 2px solid #FFC300;
+      display: inline-block;
+      padding-bottom: 0.25rem;
+    }
+    .invitation {
+      font-size: 1.25rem;
+      color: #4B0082;
+      margin-bottom: 1.5rem;
+    }
+    .main-heading {
+      font-family: 'Baloo Tammudu 2', sans-serif;
+      font-size: 3.2rem;
+      font-weight: 700;
+      color: #B5651D;
+      margin: 1rem 0;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+    }
+    .details {
+      font-size: 1.2rem;
+      color: #2E8B57;
+      margin: 1.5rem 0;
+      line-height: 1.7rem;
+    }
+    .address {
+      font-size: 1.1rem;
+      color: #36454F;
+      margin-top: 2rem;
+      font-weight: 600;
+      border-top: 2px dashed #D4AC0D;
+      padding-top: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="poster-container">
+
+    <!-- Ganesh Image -->
+    <div class="ganesha-placeholder"></div>
+
+    <!-- Text -->
+    <h1 class="om-ganesh">॥ ఓం శ్రీ గణేశాయ నమః ॥</h1>
+    <p class="organizer">గాండ్ల వీధి వినాయక ఉత్సవ సమితి</p>
+    <p class="invitation">అందరికి ఆహ్వానములు</p>
+    <p class="main-heading">పందిరి పూజ</p>
+    <p class="details">
+      27-08-2025 (బుధవారం)<br>
+      ఉదయం 10.30 గంటల నుండి
+    </p>
+    <p class="address">ఓల్డ్ పోలీస్ స్టేషన్, నార్పల</p>
+  </div>
+</body>
+</html>
